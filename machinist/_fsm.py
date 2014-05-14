@@ -655,8 +655,6 @@ class _FiniteStateInterpreter(object):
 
         @return: The output from the wrapped L{IFiniteStateMachine}.
         """
-        import pdb; pdb.set_trace()
-
         if IRichInput.providedBy(input):
             symbol = input.symbol()
             if not isinstance(input, self._richInputs):
