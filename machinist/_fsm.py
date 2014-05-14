@@ -490,10 +490,10 @@ def trivialInput(symbol):
     @return: A new type object usable as a rich input for the given symbol.
     @rtype: L{type}
     """
-    return provider(IRichInput)(type(
+    return provider(IRichInput)(implementer(IRichInput)(type(
             symbol.name.title(), (FancyStrMixin, object), {
                 "symbol": _symbol(symbol),
-                }))
+                })))
 
 
 
