@@ -664,10 +664,6 @@ class _FiniteStateInterpreter(object):
             # if it's not a symbol, the underlying FSM will raise IllegalInput
             outputs = self._fsm.receive(input)
 
-        # symbol = input.symbol()
-        # if not isinstance(input, self._richInputs):
-        #     raise IllegalInput(symbol)
-        # outputs = self._fsm.receive(symbol)
         for output in outputs:
             adapter = self._inputContext.get(output, lambda o: o)
             self._world.output(output, adapter(input))
