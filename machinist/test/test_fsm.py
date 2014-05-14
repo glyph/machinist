@@ -370,8 +370,8 @@ class ConstructExceptionTests(TestCase):
     def test_richInputInterface(self):
         """
         L{DoesNotImplement} is raised if a rich input type is given which does
-        not implement the interface required by one of the outputs which can be
-        produced when that input is received.
+        not implement the interface required by one of the outputs which can
+        be produced when that input is received.
         """
         apple = trivialInput(Input.apple)
         transitions = TransitionTable()
